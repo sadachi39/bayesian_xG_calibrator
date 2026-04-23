@@ -37,22 +37,22 @@ Distance and angle are standardized to mean 0 and variance 1.
 Both models use Bayesian logistic regression:
 
 ### Model 1
-\[
+$$
 \text{logit}(p_i) = \beta_0 + \beta_{dist}x_{dist} + \beta_{angle}x_{angle}
-\]
+$$
 
 ### Model 2
-\[
+$$
 \text{logit}(p_i) = \beta_0 + \beta_{dist}x_{dist} + \beta_{angle}x_{angle} + \beta_{tech}x_{tech}
-\]
+$$
 
 ### Priors
 
 All coefficients use weakly informative priors:
 
-\[
+$$
 \beta_j \sim \mathcal{N}(0, 2)
-\]
+$$
 
 ### Inference
 
@@ -90,7 +90,7 @@ Posterior predictive distributions show realistic uncertainty and correctly assi
 
 ## Repository Contents
 
-- `*.ipynb` — Jupyter Notebook containing:
+- `main.ipynb` — Jupyter Notebook containing:
   - data import and preprocessing
   - feature engineering (distance, angle, technique)
   - Bayesian model specification in PyMC
